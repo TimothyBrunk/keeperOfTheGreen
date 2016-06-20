@@ -1,0 +1,89 @@
+
+
+<div class = "container">
+		<h1>Add an Employee</h1><pre>
+		<form action="/employee" method="POST">
+
+				<input type="text" placeholder="position"name="position"/><br />
+				<h6>Set Employee to Administrator?</h6>
+				<input type = "radio" name = "admin" value = "FALSE" checked/>No<br/>
+				<input type = "radio" name = "admin" value = "TRUE"/>Yes<br/>
+				<input type = "number" name = "UserUserId" value = "" placeholder = "User" "ID" min = "0"/>
+				<input type="submit" onclick ="location.href='/admin'"value="Create" />
+
+		</form>
+
+<form action ="/employee" method = "GET">
+	<input type = "submit" value = "List All Employees"/>
+</form>
+		</pre>
+<br>
+<div class = "row"
+		<div class = "col-sm-6">
+		<h1>Create a category</h1><pre>
+		<form action="/categories" method="POST">
+			<input type="hidden" placeholder="id" name="id"/><br />
+			<input type="text" placeholder = "name" name="cat_name"/><br />
+			<input type="text" placeholder = "description" name="description" /><br />
+			<input type="submit" value="Create" />
+		</form></pre>
+		<br>
+
+
+	</div>
+
+<br>
+<br>
+<br>
+
+
+
+<h1>Create a Product</h1><pre>
+<form action="/product" method="POST">
+	<input type="text" placeholder="title"name="title"/><br />
+	<input type="text" placeholder="price" name="price" /><br />
+	<input type="text" placeholder="category" name="category" /><br />
+	<input type="text" placeholder="description" name="description" /><br />
+	<input type="text" placeholder="quantity" name="quantity" /><br />
+	<input type="text" placeholder="img" name="img" /><br />
+	<input type="submit" value="Create" />
+</form></pre>
+<br>
+<br>
+<br>
+<br>
+
+
+<h1>Categories</h1>
+ {{#each categories}}
+<h5>Category: {{this.cat_name}}</h5><pre>
+<form action="/editCategory{{this.id}}" method ="GET">
+	ID:   <input readonly=""type="text" placeholder="{{this.id}}"name="id"/><br />
+	Name: <input readonly type="text" value="{{this.cat_name}}"name="cat_name"/><br />
+	Desc: <input readonly type="text" value="{{this.description}}" name="description" /><br />
+	<input type="submit"  value="Edit" />
+</form></pre>
+<br>
+<br>
+{{/each}}
+
+<h1>Products</h1>
+{{#each products}}
+<h5>Product: {{this.title}}</h5><pre>
+<form action="/editProduct{{this.id}}" method="GET">
+	ID:    <input readonly type="text" value="{{this.id}}"name="id"/><br />
+	Title: <input readonly type="text" value="{{this.title}}"name="title"/><br />
+	Price: <input readonly type="text" value="{{this.price}}" name="price" /><br />
+	Cat:   <input readonly type="text" value="{{this.category}}" name="category" /><br />
+	Desc:  <input readonly type="text" value="{{this.description}}" name="description" /><br />
+	Qty:   <input readonly type="text" value="{{this.quantity}}" name="quantity" /><br />
+	Img:   <input readonly type="text" value="{{this.image}}" name="image" /><br />
+	<input type="submit" value="Edit" />
+</form></pre>
+
+{{/each}}
+
+</div>
+
+
+<a href = "admin/showAllOrders"> Show all placed orders </a> || <a href ="/"> Home </a>
