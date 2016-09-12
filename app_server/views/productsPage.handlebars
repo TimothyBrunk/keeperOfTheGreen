@@ -21,8 +21,8 @@
 
                 {{/if}}
                 <br>
-               
-               
+
+
 
 
 
@@ -40,8 +40,8 @@
                      <li>
                     <a href="#">Custom Order</a>
                     </li>
-                   
-                   
+
+
                     {{#unless guest}}
 
                         <li>
@@ -90,20 +90,6 @@
 
 					</li>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -131,7 +117,7 @@
                     <br>
                     <br>
                     <div class="row">
-    {{#if guest}}                
+    {{#if guest}}
 
        {{#each products}}
 
@@ -145,19 +131,19 @@
                             <h4><a href="#">{{this.title}} </a></h4>
                             <i>Category: {{this.category}}</i>
                             <p>{{this.description}}</p>
-                            
+
                         </div>
                     </div>
                 </div>
-            
+
 
         {{/each}}
 
-       {{/if}} 
+       {{/if}}
        {{#unless guest}}
 
               {{#each products}}
-            
+
                 <div class="col-sm-4 col-lg-4 col-md-4">
                     <div class="thumbnail">
                         <img src="./img/{{this.img}}.png" alt=""/>
@@ -166,7 +152,7 @@
                             <h4><a href="#">{{this.title}} </a></h4>
                             <i>Category: {{this.category}}</i>
                             <p>{{this.description}}</p>
-                            
+
                             <a href="/viewProducts/createCartItem/{{this.id}}" class="btn btn-default btn">Add to Cart</a>
 
 
@@ -197,9 +183,7 @@
         <br>
         <br>
         <br>
-        
-        <br>
-        <br>
-        <br>
 
-
+        <br>
+        <br>
+        <br>

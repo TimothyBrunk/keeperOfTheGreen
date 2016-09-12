@@ -15,11 +15,11 @@
 
 
                 {{#if user}}
-                    Logged in as: {{user.fname}} {{user.lname}} 
+                    Logged in as: {{user.fname}} {{user.lname}}
                 {{else}}
                     Logged in as: Guest
-                {{/if}} 
-                   
+                {{/if}}
+
 
                 </a>
             </div>
@@ -32,19 +32,19 @@
                         <a href="#page-top"></a>
                     </li>
                  	  <li>
-                       
+
                         <a href ="/"> Home</a>
                     </li>
-                   
+
                     <li>
-                       
+
                         <a href ="viewProducts"> Shop</a>
                     </li>
 
-                  
+
 
                 {{#if user}}
-                  
+
 
                     <li>
                     <a href="profile">Profile</a>
@@ -56,10 +56,10 @@
 
                 {{else}}
                     <li>
-                    <a href="login">Log In</a> 
+                    <a href="login">Log In</a>
                     </li>
                     <li>
-                     <a href="signup">Sign Up</a> 
+                     <a href="signup">Sign Up</a>
                      </li>
                 {{/if}}
                     <li id="drop">
@@ -76,7 +76,7 @@
                         <a class="page-scroll nv" href="#contact">Contact</a>
                     </li>
 
-                    
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -96,38 +96,6 @@
 
 
 
-
-
-
-<!--
-<h1>Profile</h1>
-<form  name="updateUser">
-
-	<input type="text" id="user_id" value="{{user.user_id}}"name="id"/><br />
-	<input type="text" value="{{user.fname}}"name="fname"/><br />
-	<input type="text" value="{{user.lname}}" name="lname" /><br />
-
-	<input type="text" value="{{user.address}}" name="address" /><br />
-
-	<input type="text" value="{{user.city}}" name="city" /><br />
-	<input type="text" value="{{user.state}}" name="state" /><br />
-	<input type="text" value="{{user.zip}}" name="zip" /><br />
-	<input type="text" value="{{user.phone}}" name="phone" /><br />
-	<input type="text" value="{{user.email}}" name="email" /><br />
-
-  <input type="password" placeholder="Enter Password" name="password" /><br />
-	<input type="submit" name="submit" value="Update" />
-
-</form>
--->
-
-
-
-
-
-
-
-
 <div class="jumbotron form-fixed-width glass">
     <form name="updateUser">
         <div class="row">
@@ -142,7 +110,7 @@
                         <input type="text" id="user_id" value="{{user.user_id}}"name="id" class="form-control formNoBrdrSpacing">
                     </div>
                 </div>
-                
+
 
                 <div class="col-xs-12 col-md-6">
                     <div class="input">
@@ -155,59 +123,59 @@
                         <input type="text" value="{{user.lname}}" name="lname" class="form-control formNoBrdrSpacing">
                     </div>
                 </div>
-                
+
                 <div class="col-xs-12 col-md-6">
                     <div class="input">
                         <input type="text" value="{{user.address}}" name="address" class="form-control formNoBrdrSpacing">
                     </div>
                 </div>
-                
+
                 <div class="col-xs-12 col-md-6">
                     <div class="input">
                        	<input type="text" value="{{user.city}}" name="city" class="form-control formNoBrdrSpacing">
                     </div>
                 </div>
-                
+
                 <div class="col-xs-12 col-md-6">
                     <div class="input">
                         <input type="text" value="{{user.state}}" name="state" class="form-control formNoBrdrSpacing">
                     </div>
                 </div>
-                
+
                 <div class="col-xs-12 col-md-6">
                     <div class="input">
                         <input  type="text" value="{{user.zip}}" name="zip" class="form-control formNoBrdrSpacing">
                     </div>
                 </div>
-                
+
                 <div class="col-xs-12 col-md-6">
                     <div class="input">
                         <input type="text" value="{{user.phone}}" name="phone" class="form-control formNoBrdrSpacing">
                     </div>
                 </div>
-                
+
                 <div class="col-xs-12 col-md-6">
                     <div class="input">
                         <input type="text" value="{{user.email}}" name="email" class="form-control formNoBrdrSpacing" >
                     </div>
                 </div>
-               
-            
+
+
             	   <div class="col-xs-12 col-md-6">
                     <div class="input">
                         <input type="password" placeholder="Enter Password" name="password"  class="form-control formNoBrdrSpacing ">
                     </div>
                 </div>
-                
 
-              
-                
+
+
+
                 <div class="col-xs-12 text-center">
                 <br>
                 <br>
                     <input type="submit" name="submit" value="Update"  class="btn btn-default floatR ">
                 </div>
-               
+
 
 
 
@@ -227,7 +195,3 @@
 
 
 <script src="js/updateUser.js"></script>
-
-
-
-
